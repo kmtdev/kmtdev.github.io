@@ -27,7 +27,7 @@ body > header h1 {
 	position: relative;
 	text-align: center;
 	font-size: 60px;
-	line-height: 60px;
+	line-height: 1;
 	background: linear-gradient(90deg, #ff5e3a, #ff2a68);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -61,9 +61,10 @@ article header {
 
 article h1 {
 	font-size: 22px;
-	line-height: 27px;
+	line-height: 28px;
 	color: #fff;
 	flex: 1;
+	word-wrap: break-word;
 }
 
 ul { padding: 0; }
