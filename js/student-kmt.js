@@ -22,7 +22,7 @@
 	};
 
 	var $ = window.$ = {
-		endpoint: "https://api.github.com/users/student-kmt/repos",
+		endpoint: "https://api.github.com/users/kmtdev/repos",
 		main: function () {
 			this.list = new Template(window.list);
 			this.request = new Request(this.success);
