@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/student-kmt.css">
+		<title>Student KMT</title>
+		<script src="js/helpers.js"></script>
+		<script src="js/student-kmt.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Student KMT</h1>
+		</header>
+		<main id="root"></main>
+		<template id="list">
+			{% this.forEach(function (repo) { %}
+			<article>
+				<header>
+					<h1><a href="{%= repo.html_url %}">{%= repo.name %}</a></h1>
+					<aside>
+						<ul>
+							<li>{%= repo.language %}</li>
+							<li><a href="{%= repo.stargazers_url %}" data-icon="star">{%= repo.stargazers_count %}</a></li>
+							<li><a href="{%= repo.forks_url %}" data-icon="fork">{%= repo.forks_count %}</a></li>
+						</ul>
+					</aside>
+				</header>
+				<p>{%= repo.description %}</p>
+			</article>
+			{% }); %}
+		</template>
+	</body>
+</html>
