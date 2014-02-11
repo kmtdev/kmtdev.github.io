@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<header>
-			<h1>Student KMT</h1>
+			<h1 data-text="Student KMT">Student KMT</h1>
 		</header>
 		<main id="root"></main>
 		<template id="list">
@@ -23,8 +23,8 @@
 					<aside>
 						<ul>
 							<li>{%= repo.language %}</li>
-							<li><a href="{%= repo.stargazers_url %}" data-icon="star">{%= repo.stargazers_count %}</a></li>
-							<li><a href="{%= repo.forks_url %}" data-icon="fork">{%= repo.forks_count %}</a></li>
+							<li><a href="//github.com/{%= repo.full_name %}/stargazers" data-icon="star">{%= repo.stargazers_count %}</a></li>
+							<li><a href="//github.com/{%= repo.full_name %}/stargazers" data-icon="fork">{%= repo.forks_count %}</a></li>
 						</ul>
 					</aside>
 				</header>

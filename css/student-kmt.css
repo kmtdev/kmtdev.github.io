@@ -10,12 +10,13 @@ a:hover { color: #fff; }
 html {
 	cursor: default;
 	font: 16px/22px Lato, sans-serif;
-	color: #8E8E93;
-	background: #1F1F21;
+	color: #8e8e93;
+	background: #1f1f21;
 	-webkit-font-smoothing: antialiased;
 }
 
 body {
+	padding: 0 20px;
 	margin: auto;
 	max-width: 480px;
 }
@@ -23,14 +24,24 @@ body {
 body > header { margin: 40px 0; }
 body > header h1 {
 	margin: auto;
+	position: relative;
+	text-align: center;
 	font-size: 60px;
 	line-height: 60px;
-	background: linear-gradient(90deg, #FF5E3A, #FF2A68);
+	background: linear-gradient(90deg, #ff5e3a, #ff2a68);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-article { margin: 20px 0; }
+body > header h1::after {
+	content: attr(data-text);
+	position: absolute;
+	left: 0; top: 0;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	z-index: -1;
+}
+
+article { margin: 20px 0; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
 article header {
 	align-items: center;
 	justify-content: space-between;
@@ -40,6 +51,7 @@ article h1 {
 	font-size: 22px;
 	line-height: 27px;
 	color: #fff;
+	flex: 1;
 }
 
 ul { padding: 0; }
@@ -47,6 +59,7 @@ li {
 	font-weight: 700;
 	list-style: none;
 	margin-left: 10px;
+	white-space: nowrap;
 }
 
 *[data-icon]::before {
