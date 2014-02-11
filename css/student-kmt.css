@@ -1,6 +1,10 @@
 @font-face { font-family: Lato; font-weight: 400; src: url(../fonts/lato.woff); }
 @font-face { font-family: Lato; font-weight: 700; src: url(../fonts/lato-bold.woff); }
 
+@-webkit-keyframes slide {
+	0% { opacity: 0; -webkit-transform: translateY(-10px); }
+}
+
 body, ul, h1, p { margin: 0; }
 header, header ul { display: flex; }
 
@@ -21,7 +25,7 @@ body {
 	max-width: 480px;
 }
 
-body > header { margin: 40px 0; }
+body > header { margin: 40px 0; -webkit-animation: slide 0.5s; }
 body > header h1 {
 	margin: auto;
 	position: relative;
@@ -53,7 +57,12 @@ body > header h1::before {
 	z-index: -1;
 }
 
-article { margin: 20px 0; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+article {
+	margin: 20px 0;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	-webkit-animation: slide 0.5s;
+}
+
 article header {
 	align-items: center;
 	justify-content: space-between;
@@ -68,6 +77,7 @@ article h1 {
 }
 
 ul { padding: 0; }
+
 li {
 	font-weight: 700;
 	list-style: none;
