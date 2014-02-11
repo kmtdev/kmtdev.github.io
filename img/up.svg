@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg>
 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50">
-	<polyline fill="none" points="40,7 40,16 31,15.999 " stroke="#8e8e93" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4" />
-	<path d="M7.999,25  c0-9.39,7.61-17,17-17c5.011,0,9.516,2.167,12.627,5.616c0.618,0.686,1.182,1.423,1.683,2.203" fill="none" stroke="#8e8e93" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4" />
-	<polyline fill="none" points="10,43 10,34 19,34.001" stroke="#8e8e93" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4" />
-	<path d="M42.001,25  c0,9.39-7.61,17-17,17c-5.011,0-9.516-2.168-12.627-5.616c-0.618-0.687-1.182-1.423-1.683-2.203" fill="none" stroke="#8e8e93" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4" />
+	<rect fill="#8e8e93" width="12" height="10" x="19" y="5" />
+	<rect fill="#8e8e93" width="12" height="10" x="19" y="35" />
+	<rect fill="#8e8e93" width="12" height="10" x="1" y="35" />
+	<rect fill="#8e8e93" width="12" height="10" x="37" y="35" />
+	<line fill="none" stroke="#8e8e93" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" x1="25" x2="25" y1="35" y2="15" />
+	<polyline fill="none" points="43,35 43,25 7,25 7,35" stroke="#8e8e93" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
 </svg>

@@ -5,10 +5,12 @@
 	0% { opacity: 0; -webkit-transform: translateY(-10px); }
 }
 
-body, ul, h1, p { margin: 0; }
+ul, h1, p { margin: 0; }
 header, header ul { display: flex; }
+body, body > header h1 { margin: auto; }
+body > header, article { -webkit-animation: slide 0.5s ease-in-out; }
 
-a { color: inherit; text-decoration: none; }
+a { color: inherit; text-decoration: none; transition: 0.2s; }
 a:hover { color: #fff; }
 
 html {
@@ -21,13 +23,11 @@ html {
 
 body {
 	padding: 0 20px;
-	margin: auto;
 	max-width: 480px;
 }
 
-body > header { margin: 40px 0; -webkit-animation: slide 0.5s; }
+body > header { margin: 40px 0; }
 body > header h1 {
-	margin: auto;
 	position: relative;
 	text-align: center;
 	font-size: 60px;
@@ -37,12 +37,16 @@ body > header h1 {
 	-webkit-text-fill-color: transparent;
 }
 
+body > header h1::before,
+body > header h1::after {
+	position: absolute;
+	z-index: -1;
+}
+
 body > header h1::after {
 	content: attr(data-text);
-	position: absolute;
 	left: 0; top: 0;
 	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-	z-index: -1;
 }
 
 body > header h1::before {
@@ -51,16 +55,13 @@ body > header h1::before {
 	width: 80px; height: 80px;
 	background: url(../img/cog.svg) no-repeat 50%;
 	background-size: 80px;
-	position: absolute;
 	left: 50%; top: 50%;
 	margin: -40px 0 0 -40px;
-	z-index: -1;
 }
 
 article {
 	margin: 20px 0;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-	-webkit-animation: slide 0.5s;
 }
 
 article header {

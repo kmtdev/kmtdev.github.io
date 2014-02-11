@@ -5,11 +5,11 @@
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="css/student-kmt.css">
+		<link rel="stylesheet" href="css/kmtdev.css">
 		<link rel="icon" href="img/icon.png">
 		<title>KMT Development</title>
 		<script src="js/helpers.js"></script>
-		<script src="js/student-kmt.js"></script>
+		<script src="js/kmtdev.js"></script>
 	</head>
 	<body>
 		<header>
@@ -25,7 +25,7 @@
 						<ul>
 							<li>{%= repo.language %}</li>
 							<li><a href="//github.com/{%= repo.full_name %}/stargazers" data-icon="star">{%= repo.stargazers_count %}</a></li>
-							<li><a href="//github.com/{%= repo.full_name %}/stargazers" data-icon="fork">{%= repo.forks_count %}</a></li>
+							<li><a href="//github.com/{%= repo.full_name %}/network" data-icon="fork">{%= repo.forks_count %}</a></li>
 						</ul>
 					</aside>
 				</header>
