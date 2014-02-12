@@ -1,7 +1,8 @@
 (function (window) {
 	"use strict";
 
-	var document = window.document;
+	var document = window.document,
+		location = window.location;
 
 	var Template = function (element) {
 		var source = element.innerHTML;
@@ -22,11 +23,14 @@
 	};
 
 	var $ = window.$ = {
-		endpoint: "https://api.github.com/users/kmtdev/repos",
+		endpoint: "https://api.github.com/users/{user}/repos",
 		main: function () {
 			this.list = new Template(window.list);
 			this.request = new Request(this.success);
-			this.request.get();
+
+			this.request.get({
+				user: location.host.split(".")[0]
+			});
 		},
 		success: function () {
 			window.root.appendChild($.list.render(window.root, JSON.parse(this.response)));
