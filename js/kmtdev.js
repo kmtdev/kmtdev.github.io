@@ -8,7 +8,7 @@
 		var source = element.innerHTML;
 
 		source = source.replace(/\s{2,}/g, "");
-		source = source.replace(/\{%=(.*?)%\}/g, "',$1,'");
+		source = source.replace(/\{\{(.*?)\}\}/g, "',$1,'");
 		source = source.split("{%").join("');");
 		source = source.split("%}").join("a.push('");
 		source = "var a=[];a.push('{}');return a.join('');".format(source);
